@@ -9,6 +9,17 @@ const OrderPage = (() => {
   // 正在支付的订单ID
   let payingOrderId = null;
 
+  // 获取图片路径前缀
+  const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+  const imgPrefix = isInPages ? '../' : '';
+
+  // 修复图片路径
+  function fixImgPath(imgPath) {
+    if (!imgPath) return '';
+    if (imgPath.startsWith('http')) return imgPath;
+    return imgPrefix + imgPath;
+  }
+
   // 加载订单数据
   async function loadOrders() {
     const user = API.getCurrentUser();
@@ -89,7 +100,7 @@ const OrderPage = (() => {
           <!-- 订单商品列表 -->
           <div class="order-card-body">
             ${order.items.map(item => {
-        const imgSrc = item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`;
+        const imgSrc = fixImgPath(item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`);
         return `
               <div class="order-item-row">
                 <div class="order-item-img"><img src="${imgSrc}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>

@@ -7,6 +7,17 @@ const CheckoutPage = (() => {
   // 选中的支付方式
   let selectedPayment = 'alipay';
 
+  // 获取图片路径前缀
+  const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+  const imgPrefix = isInPages ? '../' : '';
+
+  // 修复图片路径
+  function fixImgPath(imgPath) {
+    if (!imgPath) return '';
+    if (imgPath.startsWith('http')) return imgPath;
+    return imgPrefix + imgPath;
+  }
+
   // 渲染结算页面
   function render() {
     const user = API.getCurrentUser();
@@ -106,7 +117,7 @@ const CheckoutPage = (() => {
             <h3><span class="icon">📋</span> 商品清单 (${cartItems.length}件)</h3>
             <div class="order-items">
               ${cartItems.map(item => {
-      const imgSrc = item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`;
+      const imgSrc = fixImgPath(item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`);
       return `
                 <div class="order-item">
                   <div class="oi-img"><img src="${imgSrc}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>

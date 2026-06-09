@@ -7,6 +7,17 @@ const UserPage = (() => {
   // 订单数据
   let orders = [];
 
+  // 获取图片路径前缀
+  const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+  const imgPrefix = isInPages ? '../' : '';
+
+  // 修复图片路径
+  function fixImgPath(imgPath) {
+    if (!imgPath) return '';
+    if (imgPath.startsWith('http')) return imgPath;
+    return imgPrefix + imgPath;
+  }
+
   // 渲染用户中心页面
   async function render() {
     const user = API.getCurrentUser();
@@ -99,7 +110,7 @@ const UserPage = (() => {
         ${orders.length === 0 ? '<p style="color:var(--text-lighter);text-align:center;padding:30px">暂无订单记录</p>' :
         orders.slice(0, 5).map(order => {
           const firstItem = order.items[0];
-          const imgSrc = firstItem?.image && firstItem.image.startsWith('images/') ? firstItem.image : `images/${firstItem?.productId % 26 || 26}.png`;
+          const imgSrc = fixImgPath(firstItem?.image && firstItem.image.startsWith('images/') ? firstItem.image : `images/${firstItem?.productId % 26 || 26}.png`);
           return `
             <div class="recent-order-item" onclick="location.href='order.html'" style="cursor:pointer">
               <div class="roi-img"><img src="${imgSrc}" alt="${firstItem?.name || '商品'}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>

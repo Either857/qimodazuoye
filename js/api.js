@@ -18,9 +18,12 @@ const API = (() => {
   async function loadData() {
     if (_products) return;
     await delay(200);
+    // 根据当前页面位置确定数据文件路径
+    const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+    const dataPath = isInPages ? '../data/products.json' : 'data/products.json';
     try {
       // 使用fetch API加载JSON数据
-      const resp = await fetch('data/products.json');
+      const resp = await fetch(dataPath);
       const data = await resp.json();
       _products = data.products;
       _categories = data.categories;
@@ -29,7 +32,7 @@ const API = (() => {
       // 备用方案：使用XMLHttpRequest加载内联JSON（Ajax）
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'data/products.json', true);
+        xhr.open('GET', dataPath, true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {

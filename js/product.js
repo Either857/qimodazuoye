@@ -17,6 +17,17 @@ const ProductPage = (() => {
     5: '美妆护肤', 6: '食品生鲜', 7: '运动户外', 8: '图书文具'
   };
 
+  // 获取图片路径前缀
+  const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+  const imgPrefix = isInPages ? '../' : '';
+
+  // 修复图片路径
+  function fixImgPath(imgPath) {
+    if (!imgPath) return '';
+    if (imgPath.startsWith('http')) return imgPath;
+    return imgPrefix + imgPath;
+  }
+
   // 模拟用户评价数据
   const mockReviews = [
     { user: '张**', avatar: '👩', rating: 5, date: '2026-05-28', text: '质量非常好，物流也快，包装完好无损，非常满意的一次购物！' },
@@ -59,10 +70,10 @@ const ProductPage = (() => {
       <div class="product-top">
         <!-- 商品图片区域 -->
         <div class="product-gallery">
-          <div class="gallery-main" id="galleryMain"><img src="${product.images[0] || product.image}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px"></div>
+          <div class="gallery-main" id="galleryMain"><img src="${fixImgPath(product.images[0] || product.image)}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px"></div>
           <div class="gallery-thumbs">
             ${product.images.map((img, i) => `
-              <div class="thumb ${i === 0 ? 'active' : ''}" onclick="ProductPage.switchThumb(${i})"><img src="${img}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+              <div class="thumb ${i === 0 ? 'active' : ''}" onclick="ProductPage.switchThumb(${i})"><img src="${fixImgPath(img)}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
             `).join('')}
           </div>
         </div>
@@ -154,7 +165,7 @@ const ProductPage = (() => {
   function switchThumb(index) {
     currentThumbIndex = index;
     const img = product.images[index];
-    document.getElementById('galleryMain').innerHTML = `<img src="${img}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">`;
+    document.getElementById('galleryMain').innerHTML = `<img src="${fixImgPath(img)}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">`;
     document.querySelectorAll('.gallery-thumbs .thumb').forEach((el, i) => {
       el.classList.toggle('active', i === index);
     });

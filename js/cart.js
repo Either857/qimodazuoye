@@ -5,6 +5,17 @@ const CartPage = (() => {
   // 购物车数据
   let cart = [];
 
+  // 获取图片路径前缀
+  const isInPages = location.pathname.includes('/pages/') || location.pathname.includes('\\pages\\');
+  const imgPrefix = isInPages ? '../' : '';
+
+  // 修复图片路径
+  function fixImgPath(imgPath) {
+    if (!imgPath) return '';
+    if (imgPath.startsWith('http')) return imgPath;
+    return imgPrefix + imgPath;
+  }
+
   // 渲染购物车页面
   function render() {
     cart = API.getCart();
@@ -38,7 +49,7 @@ const CartPage = (() => {
 
       <!-- 购物车商品列表 -->
       ${cart.map(item => {
-      const imgSrc = item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`;
+      const imgSrc = fixImgPath(item.image && item.image.startsWith('images/') ? item.image : `images/${item.productId % 26 || 26}.png`);
       return `
         <div class="cart-item" data-id="${item.id}">
           <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="CartPage.toggleItem(${item.id}, this.checked)">
