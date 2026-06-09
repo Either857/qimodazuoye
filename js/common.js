@@ -155,7 +155,7 @@ const Common = (() => {
         <!-- 页脚底部版权信息 -->
         <div class="footer-bottom">
           <div class="container">
-            <p>© 2026 优品商城 版权所有 | 仿真实训项目 - 使用 HTML5 + CSS3 + JavaScript + Ajax + JSON 技术</p>
+            <p>© 2026 优品商城 版权所有</p>
           </div>
         </div>
       </footer>
