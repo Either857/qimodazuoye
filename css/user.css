@@ -1,0 +1,199 @@
+/* ===== 用户中心 ===== */
+.user-page {
+  margin: 16px 0 40px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* 侧边栏 */
+.user-sidebar {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.user-profile-card {
+  padding: 30px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), #c1272d);
+  color: #fff;
+}
+
+.user-avatar {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.user-email {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.user-menu {
+  padding: 8px 0;
+}
+
+.user-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: var(--text);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.user-menu a:hover,
+.user-menu a.active {
+  background: #f8f8f8;
+  color: var(--primary);
+}
+
+.user-menu a .menu-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+/* 主要内容区域 */
+.user-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  min-height: 500px;
+}
+
+.content-header {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 个人资料表单 */
+.profile-form {
+  max-width: 500px;
+}
+
+.profile-form .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-form .form-row label {
+  width: 80px;
+  text-align: right;
+  padding-right: 16px;
+  color: var(--text-light);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.profile-form .form-row .form-control {
+  flex: 1;
+}
+
+.profile-form .form-row .read-only {
+  flex: 1;
+  padding: 12px 14px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* 用户统计信息 */
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #fafafa;
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  background: #f0f0f0;
+}
+
+.stat-card .stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.stat-card .stat-label {
+  font-size: 13px;
+  color: var(--text-lighter);
+}
+
+/* 最近订单 */
+.recent-orders {
+  margin-top: 24px;
+}
+
+.recent-order-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-order-item .roi-img {
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recent-order-item .roi-info {
+  flex: 1;
+}
+
+.recent-order-item .roi-name {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.recent-order-item .roi-date {
+  font-size: 12px;
+  color: var(--text-lighter);
+}
+
+.recent-order-item .roi-status {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .user-page {
+    grid-template-columns: 1fr;
+  }
+
+  .user-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

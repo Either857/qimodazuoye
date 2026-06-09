@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优品商城 - 登录</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main class="auth-page">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <a href="login.html" class="active">登录</a>
+            <a href="register.html">注册</a>
+          </div>
+          <form id="loginForm" class="auth-form" onsubmit="return LoginPage.handleSubmit(event)">
+            <div class="form-group">
+              <label for="loginUsername">用户名 / 手机号</label>
+              <input type="text" id="loginUsername" class="form-control" placeholder="请输入用户名或手机号" autocomplete="username">
+              <div class="error-msg" id="loginUsernameError"></div>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">密码</label>
+              <div class="password-field">
+                <input type="password" id="loginPassword" class="form-control" placeholder="请输入密码" autocomplete="current-password">
+                <button type="button" class="toggle-pwd" onclick="LoginPage.togglePassword('loginPassword', this)">👁</button>
+              </div>
+              <div class="error-msg" id="loginPasswordError"></div>
+            </div>
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" id="rememberMe"> 记住我
+              </label>
+              <a href="#" class="text-link">忘记密码？</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="loginBtn">
+              登 录
+            </button>
+            <div class="auth-footer">
+              <p>还没有账号？<a href="register.html">立即注册</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="auth-side">
+          <div class="auth-side-content">
+            <h2>欢迎回来</h2>
+            <p>登录后享受个性化购物体验，查看订单、收藏商品、专享优惠等你来。</p>
+            <div class="auth-features">
+              <div class="feature-item">
+                <span>🎁</span>
+                <span>新用户专享大礼包</span>
+              </div>
+              <div class="feature-item">
+                <span>🏷️</span>
+                <span>会员专属折扣</span>
+              </div>
+              <div class="feature-item">
+                <span>📦</span>
+                <span>订单实时追踪</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/images.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,852 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "手机数码",
+      "icon": "📱"
+    },
+    {
+      "id": 2,
+      "name": "电脑办公",
+      "icon": "💻"
+    },
+    {
+      "id": 3,
+      "name": "家用电器",
+      "icon": "🏠"
+    },
+    {
+      "id": 4,
+      "name": "服饰鞋包",
+      "icon": "👕"
+    },
+    {
+      "id": 5,
+      "name": "美妆护肤",
+      "icon": "💄"
+    },
+    {
+      "id": 6,
+      "name": "食品生鲜",
+      "icon": "🍎"
+    },
+    {
+      "id": 7,
+      "name": "运动户外",
+      "icon": "⚽"
+    },
+    {
+      "id": 8,
+      "name": "图书文具",
+      "icon": "📚"
+    }
+  ],
+  "banners": [
+    {
+      "id": 1,
+      "image": "images/27.png",
+      "category": 3,
+      "title": "家用电器"
+    },
+    {
+      "id": 2,
+      "image": "images/28.png",
+      "category": 1,
+      "title": "手机数码"
+    },
+    {
+      "id": 3,
+      "image": "images/29.gif",
+      "category": 2,
+      "title": "电脑数码"
+    }
+  ],
+  "products": [
+    {
+      "id": 1001,
+      "name": "iPhone 16 Pro Max 256GB",
+      "category": 1,
+      "price": 9999,
+      "originalPrice": 10999,
+      "image": "images/1.png",
+      "images": [
+        "images/1.png"
+      ],
+      "sales": 15820,
+      "rating": 4.9,
+      "stock": 500,
+      "description": "苹果最新旗舰手机，A18 Pro芯片，钛金属设计，4800万像素主摄，支持Apple Intelligence。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "原色钛金属",
+            "蓝色钛金属",
+            "白色钛金属",
+            "黑色钛金属"
+          ]
+        },
+        {
+          "name": "存储",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ]
+        }
+      ],
+      "detail": "全新A18 Pro芯片，性能提升20%；4800万像素Pro级摄像头系统；钛金属设计，轻盈坚固；超视网膜XDR显示屏，支持ProMotion自适应刷新率；USB-C接口，支持USB 3传输速度。"
+    },
+    {
+      "id": 1002,
+      "name": "华为 Mate 70 Pro+",
+      "category": 1,
+      "price": 8999,
+      "originalPrice": 9499,
+      "image": "images/2.png",
+      "images": [
+        "images/2.png"
+      ],
+      "sales": 12350,
+      "rating": 4.8,
+      "stock": 300,
+      "description": "华为年度旗舰，麒麟芯片回归，超感知影像系统，鸿蒙操作系统。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "雅川青",
+            "白沙银",
+            "南糯紫",
+            "曜金黑"
+          ]
+        },
+        {
+          "name": "存储",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ]
+        }
+      ],
+      "detail": "搭载麒麟9100芯片，性能强劲；超感知XMAGE影像系统；等深微曲屏设计；支持卫星通信；鸿蒙操作系统，万物互联。"
+    },
+    {
+      "id": 1003,
+      "name": "MacBook Pro 16英寸 M4 Max",
+      "category": 2,
+      "price": 27999,
+      "originalPrice": 29999,
+      "image": "images/3.png",
+      "images": [
+        "images/3.png"
+      ],
+      "sales": 5680,
+      "rating": 4.9,
+      "stock": 200,
+      "description": "Apple最强笔记本，M4 Max芯片，Liquid Retina XDR显示屏。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "深空黑色",
+            "银色"
+          ]
+        },
+        {
+          "name": "内存",
+          "options": [
+            "36GB",
+            "48GB",
+            "64GB"
+          ]
+        }
+      ],
+      "detail": "M4 Max芯片，最高40核GPU；Liquid Retina XDR显示屏；最长24小时电池续航；MagSafe充电；雷雳5接口。"
+    },
+    {
+      "id": 1004,
+      "name": "联想拯救者Y9000P 2026",
+      "category": 2,
+      "price": 9499,
+      "originalPrice": 10999,
+      "image": "images/4.png",
+      "images": [
+        "images/4.png"
+      ],
+      "sales": 8920,
+      "rating": 4.7,
+      "stock": 450,
+      "description": "高性能游戏本，RTX 5070显卡，240Hz电竞屏。",
+      "specs": [
+        {
+          "name": "配置",
+          "options": [
+            "i9/16G/512G",
+            "i9/32G/1T",
+            "i9/32G/2T"
+          ]
+        }
+      ],
+      "detail": "第15代Intel酷睿i9处理器；NVIDIA RTX 5070显卡；16英寸2.5K 240Hz屏幕；霜刃散热系统5.0。"
+    },
+    {
+      "id": 1005,
+      "name": "戴森 V15 Detect 吸尘器",
+      "category": 3,
+      "price": 4990,
+      "originalPrice": 5990,
+      "image": "images/5.png",
+      "images": [
+        "images/5.png"
+      ],
+      "sales": 6750,
+      "rating": 4.8,
+      "stock": 350,
+      "description": "激光探测灰尘，智能调节吸力，整机HEPA过滤。",
+      "specs": [
+        {
+          "name": "型号",
+          "options": [
+            "V15 Detect",
+            "V15 Detect Absolute"
+          ]
+        }
+      ],
+      "detail": "激光灰尘探测技术；压电式声学传感器；LCD显示屏实时显示；整机HEPA过滤，锁住99.97%微尘。"
+    },
+    {
+      "id": 1006,
+      "name": "海尔冰箱 BCD-500WGHFD26B1",
+      "category": 3,
+      "price": 5999,
+      "originalPrice": 7999,
+      "image": "images/6.png",
+      "images": [
+        "images/6.png"
+      ],
+      "sales": 4320,
+      "rating": 4.6,
+      "stock": 180,
+      "description": "500升大容量，风冷无霜，变频节能。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "星蕴银",
+            "晶釉蓝"
+          ]
+        },
+        {
+          "name": "容量",
+          "options": [
+            "400L",
+            "500L",
+            "600L"
+          ]
+        }
+      ],
+      "detail": "500L大容量，法式四门设计；全空间保鲜技术；一级能效变频压缩机；智能WiFi控制。"
+    },
+    {
+      "id": 1007,
+      "name": "Nike Air Max Dn 男子运动鞋",
+      "category": 4,
+      "price": 1199,
+      "originalPrice": 1399,
+      "image": "images/7.png",
+      "images": [
+        "images/7.png"
+      ],
+      "sales": 23100,
+      "rating": 4.7,
+      "stock": 800,
+      "description": "Dynamic Air技术，自适应缓震，潮流外观。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "白色",
+            "灰色",
+            "蓝色"
+          ]
+        },
+        {
+          "name": "尺码",
+          "options": [
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45"
+          ]
+        }
+      ],
+      "detail": "Dynamic Air气垫技术，每一步自适应缓震；透气网眼鞋面；橡胶外底，抓地力强；经典Air Max设计语言。"
+    },
+    {
+      "id": 1011,
+      "name": "三只松鼠坚果大礼包 1.56kg",
+      "category": 6,
+      "price": 128,
+      "originalPrice": 199,
+      "image": "images/8.png",
+      "images": [
+        "images/8.png"
+      ],
+      "sales": 89200,
+      "rating": 4.6,
+      "stock": 2000,
+      "description": "精选8种坚果，每日营养补充，礼盒装。",
+      "specs": [
+        {
+          "name": "规格",
+          "options": [
+            "经典款1.56kg",
+            "豪华款2.28kg"
+          ]
+        }
+      ],
+      "detail": "包含碧根果、夏威夷果、腰果、核桃、开心果等8种精选坚果；独立小包装，新鲜锁味；精美礼盒装，送礼佳选。"
+    },
+    {
+      "id": 1012,
+      "name": "阿迪达斯 Ultraboost Light 跑鞋",
+      "category": 7,
+      "price": 1299,
+      "originalPrice": 1499,
+      "image": "images/9.png",
+      "images": [
+        "images/9.png"
+      ],
+      "sales": 11200,
+      "rating": 4.7,
+      "stock": 500,
+      "description": "BOOST Light中底科技，轻量回弹，跑步利器。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "核心黑",
+            "云白",
+            "灰蓝"
+          ]
+        },
+        {
+          "name": "尺码",
+          "options": [
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ],
+      "detail": "BOOST Light中底，减重30%，回弹性能不变；Continental马牌橡胶外底；Primeknit鞋面，贴合包裹。"
+    },
+    {
+      "id": 1013,
+      "name": "索尼 WH-1000XM6 头戴式耳机",
+      "category": 1,
+      "price": 2699,
+      "originalPrice": 2999,
+      "image": "images/10.png",
+      "images": [
+        "images/10.png"
+      ],
+      "sales": 7850,
+      "rating": 4.9,
+      "stock": 350,
+      "description": "旗舰降噪耳机，LDAC无损音质，30小时续航。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "铂金银",
+            "午夜蓝"
+          ]
+        }
+      ],
+      "detail": "集成处理器V2，业界领先降噪；LDAC高解析度音频；30小时超长续航；3分钟快充3小时；多点连接。"
+    },
+    {
+      "id": 1014,
+      "name": "iPad Pro M4 13英寸 256GB",
+      "category": 2,
+      "price": 10999,
+      "originalPrice": 11999,
+      "image": "images/11.png",
+      "images": [
+        "images/11.png"
+      ],
+      "sales": 6200,
+      "rating": 4.8,
+      "stock": 280,
+      "description": "超薄设计，M4芯片，OLED显示屏。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "深空黑色",
+            "银色"
+          ]
+        },
+        {
+          "name": "存储",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB",
+            "2TB"
+          ]
+        }
+      ],
+      "detail": "M4芯片，超强性能；Ultra Retina XDR OLED显示屏；史上最薄iPad，仅5.1mm；支持Apple Pencil Pro。"
+    },
+    {
+      "id": 1015,
+      "name": "小米14 Ultra",
+      "category": 1,
+      "price": 5999,
+      "originalPrice": 6499,
+      "image": "images/12.png",
+      "images": [
+        "images/12.png"
+      ],
+      "sales": 19500,
+      "rating": 4.7,
+      "stock": 600,
+      "description": "徕卡光学，骁龙8 Gen3，2K LTPO屏。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "白色",
+            "蓝色"
+          ]
+        },
+        {
+          "name": "存储",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ]
+        }
+      ],
+      "detail": "徕卡Summilux光学镜头；骁龙8 Gen3处理器；6.73英寸2K LTPO AMOLED屏；5300mAh电池，90W有线+80W无线充电。"
+    },
+    {
+      "id": 1016,
+      "name": "戴尔 U2723QE 4K显示器",
+      "category": 2,
+      "price": 3999,
+      "originalPrice": 4599,
+      "image": "images/13.png",
+      "images": [
+        "images/13.png"
+      ],
+      "sales": 3400,
+      "rating": 4.8,
+      "stock": 220,
+      "description": "27英寸4K IPS Black面板，Type-C 90W供电。",
+      "specs": [
+        {
+          "name": "尺寸",
+          "options": [
+            "27英寸",
+            "32英寸"
+          ]
+        }
+      ],
+      "detail": "IPS Black技术，2000:1对比度；4K UHD分辨率；Type-C接口90W供电；VESA DisplayHDR 400认证。"
+    },
+    {
+      "id": 1017,
+      "name": "三星 Galaxy S25 Ultra",
+      "category": 1,
+      "price": 9699,
+      "originalPrice": 10499,
+      "image": "images/14.png",
+      "images": [
+        "images/14.png"
+      ],
+      "sales": 9800,
+      "rating": 4.8,
+      "stock": 400,
+      "description": "Galaxy AI加持，钛金属边框，2亿像素摄像头。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "钛灰色",
+            "钛黑色",
+            "钛蓝色",
+            "钛银色"
+          ]
+        },
+        {
+          "name": "存储",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ]
+        }
+      ],
+      "detail": "骁龙8至尊版处理器；6.9英寸QHD+ Dynamic AMOLED 2X屏；2亿像素主摄+S Pen；Galaxy AI智能体验；5000mAh电池，45W快充。"
+    },
+    {
+      "id": 1018,
+      "name": "JBL Charge 5 蓝牙音箱",
+      "category": 1,
+      "price": 999,
+      "originalPrice": 1299,
+      "image": "images/15.png",
+      "images": [
+        "images/15.png"
+      ],
+      "sales": 28600,
+      "rating": 4.7,
+      "stock": 900,
+      "description": "IP67防水防尘，20小时续航，可当充电宝。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "蓝色",
+            "红色",
+            "军绿",
+            "粉色"
+          ]
+        }
+      ],
+      "detail": "JBL Pro Sound震撼音效；IP67级防水防尘；20小时超长续航；内置7500mAh充电宝功能；多台串联。"
+    },
+    {
+      "id": 1019,
+      "name": "华硕 ROG 幻16 2026",
+      "category": 2,
+      "price": 14999,
+      "originalPrice": 16999,
+      "image": "images/16.png",
+      "images": [
+        "images/16.png"
+      ],
+      "sales": 3200,
+      "rating": 4.8,
+      "stock": 150,
+      "description": "RTX 5080显卡，Mini LED屏，创作游戏全能本。",
+      "specs": [
+        {
+          "name": "配置",
+          "options": [
+            "i9/32G/1T",
+            "i9/64G/2T"
+          ]
+        }
+      ],
+      "detail": "第15代Intel酷睿i9处理器；NVIDIA RTX 5080显卡；16英寸2.5K 240Hz Mini LED屏；冰川散热架构2.0。"
+    },
+    {
+      "id": 1020,
+      "name": "小米电视 S85 Mini LED",
+      "category": 3,
+      "price": 6999,
+      "originalPrice": 8999,
+      "image": "images/17.png",
+      "images": [
+        "images/17.png"
+      ],
+      "sales": 5100,
+      "rating": 4.6,
+      "stock": 200,
+      "description": "85英寸Mini LED，1200nits峰值亮度，144Hz高刷。",
+      "specs": [
+        {
+          "name": "尺寸",
+          "options": [
+            "65英寸",
+            "75英寸",
+            "85英寸"
+          ]
+        }
+      ],
+      "detail": "85英寸Mini LED面板；1200nits峰值亮度；4K 144Hz高刷新率；HDMI 2.1接口；小爱同学语音控制。"
+    },
+    {
+      "id": 1021,
+      "name": "科沃斯 T30 Pro 扫地机器人",
+      "category": 3,
+      "price": 3999,
+      "originalPrice": 4999,
+      "image": "images/18.png",
+      "images": [
+        "images/18.png"
+      ],
+      "sales": 7800,
+      "rating": 4.7,
+      "stock": 300,
+      "description": "11000Pa大吸力，热水洗拖布，智能避障。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "白色",
+            "黑色"
+          ]
+        }
+      ],
+      "detail": "11000Pa超强吸力；55°C热水洗拖布；3D结构光避障；自动集尘+自动上下水；TrueMapping 3.0建图。"
+    },
+    {
+      "id": 1022,
+      "name": "斐乐 FILA 猫爪老爹鞋",
+      "category": 4,
+      "price": 699,
+      "originalPrice": 980,
+      "image": "images/19.png",
+      "images": [
+        "images/19.png"
+      ],
+      "sales": 34500,
+      "rating": 4.6,
+      "stock": 1000,
+      "description": "经典猫爪系列，增高显腿长，潮流百搭。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "白色",
+            "黑色",
+            "米色"
+          ]
+        },
+        {
+          "name": "尺码",
+          "options": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43"
+          ]
+        }
+      ],
+      "detail": "经典猫爪鞋底设计，增高约5cm；透气网面鞋面；轻量EVA中底缓震；百搭潮流造型。"
+    },
+    {
+      "id": 1023,
+      "name": "波司登 极寒系列羽绒服",
+      "category": 4,
+      "price": 1999,
+      "originalPrice": 2999,
+      "image": "images/20.png",
+      "images": [
+        "images/20.png"
+      ],
+      "sales": 12400,
+      "rating": 4.8,
+      "stock": 500,
+      "description": "鹅绒充绒280g，抗寒-30°C，时尚保暖。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "深蓝",
+            "军绿",
+            "灰色"
+          ]
+        },
+        {
+          "name": "尺码",
+          "options": [
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "XXXL"
+          ]
+        }
+      ],
+      "detail": "95%白鹅绒，充绒量280g；抗寒-30°C极寒科技；防水防风面料；人体工学裁剪，活动自如。"
+    },
+    {
+      "id": 1024,
+      "name": "雅诗兰黛 小棕瓶精华 100ml",
+      "category": 5,
+      "price": 990,
+      "originalPrice": 1180,
+      "image": "images/21.png",
+      "images": [
+        "images/21.png"
+      ],
+      "sales": 22300,
+      "rating": 4.9,
+      "stock": 700,
+      "description": "第七代小棕瓶，夜间修护，淡化细纹。",
+      "specs": [
+        {
+          "name": "规格",
+          "options": [
+            "30ml",
+            "50ml",
+            "75ml",
+            "100ml"
+          ]
+        }
+      ],
+      "detail": "时钟肌因信源科技；夜间深层修护肌肤损伤；淡化细纹，细致毛孔；改善暗沉，提亮肤色。"
+    },
+    {
+      "id": 1025,
+      "name": "认养一头牛 纯牛奶 200ml*24盒",
+      "category": 6,
+      "price": 59.9,
+      "originalPrice": 79.9,
+      "image": "images/22.png",
+      "images": [
+        "images/22.png"
+      ],
+      "sales": 156000,
+      "rating": 4.7,
+      "stock": 5000,
+      "description": "自有牧场奶源，3.3g蛋白质，醇香好喝。",
+      "specs": [
+        {
+          "name": "规格",
+          "options": [
+            "200ml*12盒",
+            "200ml*24盒",
+            "250ml*12盒"
+          ]
+        }
+      ],
+      "detail": "自有牧场优质奶源；每100ml含3.3g优质蛋白；UHT超高温灭菌；全程冷链配送。"
+    },
+    {
+      "id": 1026,
+      "name": "Keep 瑜伽垫 NBR加厚款",
+      "category": 7,
+      "price": 89,
+      "originalPrice": 149,
+      "image": "images/23.png",
+      "images": [
+        "images/23.png"
+      ],
+      "sales": 67800,
+      "rating": 4.5,
+      "stock": 3000,
+      "description": "NBR材质，10mm加厚，防滑回弹，送绑带。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "深紫",
+            "深蓝",
+            "灰色",
+            "粉色"
+          ]
+        },
+        {
+          "name": "厚度",
+          "options": [
+            "6mm",
+            "8mm",
+            "10mm"
+          ]
+        }
+      ],
+      "detail": "高品质NBR材质，环保无异味；10mm加厚设计，保护关节；双面防滑纹理；附赠收纳绑带和网兜。"
+    },
+    {
+      "id": 1027,
+      "name": "得力 文具大礼包 开学套装",
+      "category": 8,
+      "price": 49.9,
+      "originalPrice": 89.9,
+      "image": "images/24.png",
+      "images": [
+        "images/24.png"
+      ],
+      "sales": 43200,
+      "rating": 4.6,
+      "stock": 2000,
+      "description": "28件套，中性笔、笔记本、尺子等开学必备。",
+      "specs": [
+        {
+          "name": "规格",
+          "options": [
+            "基础款28件",
+            "豪华款42件"
+          ]
+        }
+      ],
+      "detail": "包含中性笔、铅笔、橡皮、尺子、笔记本、文件夹等28件开学必备文具；精美收纳袋包装。"
+    },
+    {
+      "id": 1028,
+      "name": "小米手环 9 Pro",
+      "category": 1,
+      "price": 349,
+      "originalPrice": 399,
+      "image": "images/25.png",
+      "images": [
+        "images/25.png"
+      ],
+      "sales": 52000,
+      "rating": 4.6,
+      "stock": 2000,
+      "description": "1.74英寸AMOLED屏，独立GNSS，血氧检测。",
+      "specs": [
+        {
+          "name": "颜色",
+          "options": [
+            "黑色",
+            "银色",
+            "金色"
+          ]
+        }
+      ],
+      "detail": "1.74英寸AMOLED大屏；独立GNSS五星定位；血氧+心率+睡眠全天候监测；150+运动模式；21天超长续航。"
+    },
+    {
+      "id": 1029,
+      "name": "乐高 机械组 保时捷 911",
+      "category": 8,
+      "price": 1299,
+      "originalPrice": 1599,
+      "image": "images/26.png",
+      "images": [
+        "images/26.png"
+      ],
+      "sales": 8700,
+      "rating": 4.9,
+      "stock": 250,
+      "description": "1580颗粒，精密机械传动，收藏级模型。",
+      "specs": [
+        {
+          "name": "型号",
+          "options": [
+            "保时捷911 RSR",
+            "保时捷911 GT3"
+          ]
+        }
+      ],
+      "detail": "1580+颗粒精密还原；可运转的水平对置六缸发动机；活动式活塞、转向系统和悬架；收藏级展示模型。"
+    }
+  ]
+}

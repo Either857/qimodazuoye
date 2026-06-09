@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优品商城 - 首页</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- 轮播图/横幅区域 - 展示商城主要活动和促销信息 -->
+    <section class="hero-section">
+      <div class="container">
+        <!-- 商品分类列表（左侧） -->
+        <div class="sidebar-categories" id="categoriesGrid">
+          <!-- 动态渲染的分类项 -->
+        </div>
+        <!-- 轮播图容器 - 包含轮播项和控制按钮 -->
+        <div class="carousel-wrapper">
+          <!-- 轮播图内容区域 - 动态渲染轮播项 -->
+          <div class="carousel" id="carousel">
+            <!-- 动态渲染的轮播项 -->
+          </div>
+          <!-- 轮播图控制按钮 - 上一张/下一张 -->
+          <button class="carousel-btn prev" onclick="IndexPage.carousel.prev()">‹</button>
+          <button class="carousel-btn next" onclick="IndexPage.carousel.next()">›</button>
+          <!-- 轮播图指示器 - 显示当前位置和切换状态 -->
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 热销商品区域 - 展示热门商品和排序选项 -->
+    <section class="products-section">
+      <div class="container">
+        <!-- 商品标题和排序选项区域 -->
+        <div class="section-title">
+          <h2 id="productsTitle">热销商品</h2>
+          <!-- 排序选项卡 - 提供多种商品排序方式 -->
+          <div class="sort-tabs" id="sortTabs">
+            <button class="active" data-sort="default">综合排序</button>
+            <button data-sort="sales">销量</button>
+            <button data-sort="new">新品</button>
+            <button data-sort="price-asc">价格↑</button>
+            <button data-sort="price-desc">价格↓</button>
+          </div>
+        </div>
+        <!-- 商品网格布局 - 动态渲染商品项 -->
+        <div class="products-grid" id="productsGrid">
+          <!-- 加载状态提示 -->
+          <div class="loading">加载中</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

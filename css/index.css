@@ -1,0 +1,242 @@
+/* ===== 轮播图区域 ===== */
+.hero-section {
+  padding: 24px 0 16px;
+}
+
+/* 容器布局 - 左侧分类 + 中间轮播图 */
+.hero-section .container {
+  display: flex;
+  gap: 16px;
+}
+
+/* 轮播图容器 */
+.carousel-wrapper {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+/* 轮播图轨道 */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* 轮播图单张幻灯片 */
+.carousel-slide {
+  min-width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 轮播图文字覆盖层 */
+.carousel-text-overlay {
+  position: absolute;
+  left: 24px;
+  top: 80px;
+  overflow: hidden;
+  width: 420px;
+  z-index: 1;
+  color: rgb(250, 255, 255);
+}
+
+/* 轮播图标题第一行 */
+.carousel-text-overlay .title-top {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* 轮播图标题第二行 */
+.carousel-text-overlay .title-middle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 轮播图副标题 */
+.carousel-text-overlay .subtitle {
+  font-size: 14px;
+}
+
+/* 轮播图切换按钮 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  font-size: 24px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  z-index: 10;
+  opacity: 0;
+}
+
+/* 悬停时显示按钮 */
+.carousel-wrapper:hover .carousel-btn {
+  opacity: 1;
+}
+
+/* 按钮悬停效果 */
+.carousel-btn:hover {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* 上一张按钮位置 */
+.carousel-btn.prev {
+  left: 16px;
+}
+
+/* 下一张按钮位置 */
+.carousel-btn.next {
+  right: 16px;
+}
+
+/* 轮播图指示器容器 */
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+/* 指示器圆点 */
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* 当前激活的指示器 */
+.carousel-dots .dot.active {
+  background: #fff;
+  width: 28px;
+  border-radius: 5px;
+}
+
+/* ===== 侧边栏分类 ===== */
+.sidebar-categories {
+  width: 180px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 分类项目 */
+.sidebar-categories .category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* 分类项目悬停和激活状态 */
+.sidebar-categories .category-item:hover,
+.sidebar-categories .category-item.active {
+  background: #fff0f0;
+  color: var(--primary);
+}
+
+/* ===== 商品区域 ===== */
+.products-section {
+  padding: 30px 0;
+}
+
+/* 排序选项卡容器 */
+.sort-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+/* 排序按钮 */
+.sort-tabs button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+/* 排序按钮悬停效果 */
+.sort-tabs button:hover {
+  background: #f0f0f0;
+}
+
+/* 激活的排序按钮 */
+.sort-tabs button.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* 商品网格布局 */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* ===== 响应式布局 ===== */
+@media (max-width: 992px) {
+  /* 中等屏幕隐藏侧边栏分类 */
+  .sidebar-categories {
+    display: none;
+  }
+
+  /* 商品网格调整为3列 */
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 平板屏幕轮播图区域调整 */
+  .hero-section {
+    padding: 12px 0;
+  }
+
+  .carousel-btn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  /* 手机屏幕商品网格调整为2列 */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* 轮播图高度减小 */
+  .carousel-slide {
+    height: 200px;
+  }
+}

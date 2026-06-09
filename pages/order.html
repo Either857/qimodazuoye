@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优品商城 - 我的订单</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/order.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>›</span>
+        <span>我的订单</span>
+      </div>
+
+      <!-- 支付弹窗 -->
+      <div class="modal-overlay" id="payModal">
+        <div class="modal">
+          <h3 id="payModalTitle">确认支付</h3>
+          <p style="margin-bottom:20px;color:var(--text-light)" id="payModalDesc">请确认支付以下订单</p>
+          <div style="display:flex;gap:12px;justify-content:flex-end">
+            <button class="btn btn-outline" onclick="OrderPage.closePayModal()">取消</button>
+            <button class="btn btn-primary" id="payConfirmBtn" onclick="OrderPage.confirmPay()">确认支付</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-page" id="orderPage">
+        <div class="loading">加载中</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/images.js"></script>
+  <script src="../js/order.js"></script>
+</body>
+</html>

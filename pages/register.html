@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优品商城 - 注册</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main class="auth-page">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <a href="login.html">登录</a>
+            <a href="register.html" class="active">注册</a>
+          </div>
+          <form id="registerForm" class="auth-form" onsubmit="return RegisterPage.handleSubmit(event)">
+            <div class="form-group">
+              <label for="regUsername">用户名</label>
+              <input type="text" id="regUsername" class="form-control" placeholder="3-20个字符，字母数字下划线" autocomplete="username">
+              <div class="error-msg" id="regUsernameError"></div>
+            </div>
+            <div class="form-group">
+              <label for="regPhone">手机号</label>
+              <input type="tel" id="regPhone" class="form-control" placeholder="请输入11位手机号" autocomplete="tel">
+              <div class="error-msg" id="regPhoneError"></div>
+            </div>
+            <div class="form-group">
+              <label for="regPassword">密码</label>
+              <div class="password-field">
+                <input type="password" id="regPassword" class="form-control" placeholder="6-20个字符" autocomplete="new-password">
+                <button type="button" class="toggle-pwd" onclick="RegisterPage.togglePassword('regPassword', this)">👁</button>
+              </div>
+              <div class="error-msg" id="regPasswordError"></div>
+            </div>
+            <div class="form-group">
+              <label for="regConfirm">确认密码</label>
+              <div class="password-field">
+                <input type="password" id="regConfirm" class="form-control" placeholder="请再次输入密码" autocomplete="new-password">
+                <button type="button" class="toggle-pwd" onclick="RegisterPage.togglePassword('regConfirm', this)">👁</button>
+              </div>
+              <div class="error-msg" id="regConfirmError"></div>
+            </div>
+            <div class="agreement">
+              <input type="checkbox" id="agreeTerms">
+              <label for="agreeTerms">我已阅读并同意 <a href="#">《用户服务协议》</a> 和 <a href="#">《隐私政策》</a></label>
+            </div>
+            <div class="error-msg" id="regAgreementError" style="margin-top:-16px;margin-bottom:12px"></div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="registerBtn">
+              注 册
+            </button>
+            <div class="auth-footer">
+              <p>已有账号？<a href="login.html">立即登录</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="auth-side">
+          <div class="auth-side-content">
+            <h2>加入我们</h2>
+            <p>注册成为优品商城会员，享受海量优惠商品和专属服务。</p>
+            <div class="auth-features">
+              <div class="feature-item">
+                <span>💰</span>
+                <span>注册即送100元优惠券</span>
+              </div>
+              <div class="feature-item">
+                <span>⭐</span>
+                <span>积分抵现更划算</span>
+              </div>
+              <div class="feature-item">
+                <span>🚚</span>
+                <span>部分商品包邮到家</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/images.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>
